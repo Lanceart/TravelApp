@@ -1,0 +1,17 @@
+import { FaWineGlassEmpty } from 'react-icons/fa6';
+import { create} from 'zustand';
+
+interface RegisterModalStore{
+    isOpen: boolean
+    onOpen: ()=>void;
+    onClose: ()=>void;
+
+}
+
+const useRegiserModal = create<RegisterModalStore>((set) => ({
+    isOpen: false,
+    onOpen: ()=>set({isOpen:true}),
+    onClose: ()=>set({isOpen:false}),
+}));
+
+export default useRegiserModal;
