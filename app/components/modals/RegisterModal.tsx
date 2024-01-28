@@ -12,6 +12,7 @@ import Button from '../Button';
 
 import useRegiserModal from '@/app/hooks/useRegisterModal';
 import toast from 'react-hot-toast';
+import { signIn } from 'next-auth/react';
 const RegisterModal = () =>{
     const registerModal = useRegiserModal();
     const [isLoading, setIsLoading] = useState(false);
@@ -88,7 +89,7 @@ const RegisterModal = () =>{
                 outline
                 label='Continue with Google'
                 icon={FcGoogle}
-                onClick={() =>{}}
+                onClick={() =>signIn('google')}
             />
             <div
                 className='text-neutral-500
