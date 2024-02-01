@@ -84,7 +84,7 @@ const RentModal = () => {
                 subtitle="Pick a category"
             />
             <div
-                className="
+                className=" 
                 
                     grid
                     grid-cols-1
